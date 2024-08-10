@@ -1,0 +1,14 @@
+a{   
+    width: 100%;
+    align-content: center;
+    padding: 0 2rem;
+    border-radius: 0px !important; //Nesse componente é melhor o !important do que alterar de maneira globar os estilos e procurar cada classe da drawer para tal
+                                    //Também foi preferíve, para o momento, do que utilizar ::ng-deep ou ViewEncapsulation.None
+                                    //Gostaria de utilizar app-child, porém não consegui a implementação correta por enquanto.
+    i{
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+    
+    
+}
