@@ -1,0 +1,28 @@
+<mat-drawer-container class="drawer-container" autosize hasBackdrop="true">
+    <mat-drawer #drawer class="drawer" mode="side" [(opened)]="openDrawer" back>
+        <section>
+
+        </section>
+        <mat-nav-list class="nav-list">
+            <app-list-item routerLink="/" icon="house" texto="Home" />
+            <app-list-item routerLink="/" icon="forum" texto="Pacttos (Chats)" />
+            <app-list-item routerLink="/" icon="video_library" texto="Items to review" />
+            <app-list-item routerLink="/" icon="link" texto="Web links you created" />
+            <app-list-item routerLink="/" icon="manage_accounts" texto="Web links you created" />
+            <app-list-item routerLink="/" icon="redeem" texto="Personal information" />
+            <app-list-item routerLink="/" icon="view_carousel" texto="Review packages for sale" />
+            <app-list-item routerLink="/" icon="ondemand_video" texto="Pactto website" />
+            <app-list-item routerLink="/" icon="subscriptions" texto="Reference video library" />
+            <app-list-item routerLink="/" icon="settings" texto="Subscription" />
+            <app-list-item routerLink="/" icon="link" texto="Review Settings" />
+            <button mat-button>Botão</button>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+    </div>
+
+</mat-drawer-container>
