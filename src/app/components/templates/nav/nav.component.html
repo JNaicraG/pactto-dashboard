@@ -1,8 +1,7 @@
 <mat-drawer-container class="drawer-container" autosize hasBackdrop="true">
     <mat-drawer #drawer class="drawer" mode="side" [(opened)]="openDrawer" back>
-        <app-nav-header/>
-        <i></i>
-        <mat-nav-list class="nav-list">
+        <app-nav-header (onCloseDrawer)="closeDrawer()"/>
+        <mat-nav-list>
             <app-list-item routerLink="/" icon="house" texto="Home" />
             <app-list-item routerLink="/" icon="forum" texto="Pacttos (Chats)" />
             <app-list-item routerLink="/" icon="video_library" texto="Items to review" />
@@ -14,7 +13,7 @@
             <app-list-item routerLink="/" icon="subscriptions" texto="Reference video library" />
             <app-list-item routerLink="/" icon="settings" texto="Subscription" />
             <app-list-item routerLink="/" icon="link" texto="Review Settings" />
-            <button mat-button>Botão</button>
+            <button mat-button>LOGOUT</button>
         </mat-nav-list>
     </mat-drawer>
 
@@ -22,6 +21,6 @@
         <button type="button" mat-button (click)="drawer.toggle()">
             Toggle sidenav
         </button>
+        <router-outlet/>
     </div>
-
 </mat-drawer-container>
