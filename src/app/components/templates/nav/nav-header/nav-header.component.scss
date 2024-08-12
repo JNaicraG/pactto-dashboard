@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.3rem 0;
+    gap: 8px;
+
+    .header{
+        padding-left: 0.8rem;
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+    
+            img {
+                height: 45px;
+                margin: 0;
+            }
+
+            button{
+                height: 50px;
+                width: 50px;
+                i{
+                    vertical-align: middle;
+                    font-weight: bolder;
+                    font-size: 1.8rem;
+                    color: #fff;
+                }
+                //border-radius: ;
+                //width: 50px;
+                //height: 50px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-self: start;
+        gap: 0.5rem;
+        padding: 0 1rem;
+
+        .profile {
+            width: 40px;
+            height: 40px;
+
+            img {
+                border-radius: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .pro {
+            display: flex;
+            flex-direction: column;
+
+            :nth-child(1) {
+                font-size: 0.6rem;
+                font-weight: bolder;
+            }
+
+            :nth-child(2) {
+                padding: 4px;
+                background-color: #1dbba5;
+                border-radius: 5px;
+                color: #fff;
+            }
+        }
+
+        a {
+            font-size: 0.7rem;
+            text-decoration: underline;
+            padding: 1rem 0;
+            align-items: center;
+        }
+    }
+
+    .info-holder {
+        display: flex;
+        flex-direction: column;
+        margin-top:16px;
+        align-items: start;
+        padding: 0 1rem;
+        margin-bottom: 16px;
+        
+        h1 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+
+}
