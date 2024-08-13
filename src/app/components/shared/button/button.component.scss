@@ -1,0 +1,10 @@
+@use '../../../../styles/colors/main-colors.scss' as color;
+
+div{
+    padding: 16px 32px;
+    button{
+        width: 100%;
+        height: 48px;
+        background: color.$accent-blue;
+    }
+}

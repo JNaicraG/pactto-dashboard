@@ -1,1 +1,4 @@
-<p>button works!</p>
+<div class="button">
+    <button mat-flat-button (color)="color" [ngStyle]="{'background-color': colorCss}">{{text}}</button>
+    <span>{{colorCss}}</span>
+</div>

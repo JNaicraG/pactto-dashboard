@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  imports: [
+    MatButtonModule,
+    CommonModule
+  ],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
+  @Input() text: string = '';
+  @Input() color: string = '';
+  @Input() colorCss: string = '';
 
 }
