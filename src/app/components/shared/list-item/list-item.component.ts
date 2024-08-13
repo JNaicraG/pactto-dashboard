@@ -11,5 +11,5 @@ import { MatListModule } from '@angular/material/list';
 export class ListItemComponent {
   @Input() routerLink:string = '';
   @Input() icon:string = '';
-  @Input() texto:string = '';
+  @Input() text:string = '';
 }
