@@ -1,23 +1,23 @@
-<mat-drawer-container class="drawer-container" autosize hasBackdrop="true">
-    <mat-drawer #drawer class="drawer" mode="side" [(opened)]="openDrawer" back>
+<mat-drawer-container class="drawer-container" autosize hasBackdrop="true" color="primary">
+    <mat-drawer #drawer class="drawer" mode="side" [(opened)]="openDrawer" back color="secondary">
         <app-nav-header (onCloseDrawer)="closeDrawer()"/>
         <mat-nav-list>
-            <app-list-item routerLink="/" icon="house" texto="Home" />
-            <app-list-item routerLink="/" icon="forum" texto="Pacttos (Chats)" />
-            <app-list-item routerLink="/" icon="video_library" texto="Items to review" />
-            <app-list-item routerLink="/" icon="link" texto="Web links you created" />
-            <app-list-item routerLink="/" icon="manage_accounts" texto="Web links you created" />
-            <app-list-item routerLink="/" icon="redeem" texto="Personal information" />
-            <app-list-item routerLink="/" icon="view_carousel" texto="Review packages for sale" />
-            <app-list-item routerLink="/" icon="ondemand_video" texto="Pactto website" />
-            <app-list-item routerLink="/" icon="subscriptions" texto="Reference video library" />
-            <app-list-item routerLink="/" icon="settings" texto="Subscription" />
-            <app-list-item routerLink="/" icon="link" texto="Review Settings" />
-            <button mat-button>LOGOUT</button>
+            <app-list-item routerLink="/" icon="house" text="Home" />
+            <app-list-item routerLink="/" icon="forum" text="Pacttos (Chats)" />
+            <app-list-item routerLink="/" icon="video_library" text="Items to review" />
+            <app-list-item routerLink="/" icon="link" text="Web links you created" />
+            <app-list-item routerLink="/" icon="manage_accounts" text="Web links you created" />
+            <app-list-item routerLink="/" icon="redeem" text="Personal information" />
+            <app-list-item routerLink="/" icon="view_carousel" text="Review packages for sale" />
+            <app-list-item routerLink="/" icon="ondemand_video" text="Pactto website" />
+            <app-list-item routerLink="/" icon="subscriptions" text="Reference video library" />
+            <app-list-item routerLink="/" icon="settings" text="Subscription" />
+            <app-list-item routerLink="/" icon="link" text="Review Settings" />
+            <app-button text="LOGOUT" [colorCss]="buttonColor"/>
         </mat-nav-list>
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div class="drawer-content">
         <button type="button" mat-button (click)="drawer.toggle()">
             Toggle sidenav
         </button>
