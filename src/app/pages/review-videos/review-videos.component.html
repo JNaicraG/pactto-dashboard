@@ -1,1 +1,4 @@
-<p>review-videos works!</p>
+<app-container class="container">
+    <h1>{{videos.length === 0 ? 'There are no review requests sent to you' : 'Review Videos'}}</h1>
+    <app-search-bar [queryControl]="queryControl"></app-search-bar>
+</app-container>
