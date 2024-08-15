@@ -1,0 +1,86 @@
+@use '../../../styles/colors/main-colors.scss' as main-colors;
+
+.container {
+    margin: 0;
+    padding: 1.1rem 2rem;
+    //min-width: 100%;
+    
+    h1,
+    h2 {
+        color: #fff;
+    }
+
+    section:nth-child(1) {
+        h2 {
+            font: 500 1.4rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+        }
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        li {
+            display: flex;
+            justify-content: start;
+            font: 500 0.93rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+
+            div {
+                gap: 0.1rem;
+                align-self: center;
+            }
+
+            span {
+                color:#{main-colors.$secondary-dark};
+                margin-left: 0.3rem;
+                align-self: center;
+            }
+
+            a {
+                text-decoration: underline;
+                color: #{main-colors.$accent-blue};
+            }
+
+        }
+    }
+
+    section:nth-child(2) {
+        //padding: 2rem 0;
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: start;
+        //align-items: start;
+        //min-width: 100%;
+        
+        div {
+            //min-width: 100%;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+            }
+
+            .file-upload{
+                width: fit-content;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+
+
+
+
+
+}
