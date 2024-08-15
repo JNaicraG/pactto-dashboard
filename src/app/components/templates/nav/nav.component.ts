@@ -33,7 +33,7 @@ export class NavComponent {
     { routerLink: '/personal-info', icon: 'manage_accounts', text: 'Personal information' },
     { routerLink: '/packages', icon: 'redeem', text: 'Review package for sale' },
     { routerLink: '/profile', icon: 'view_carousel', text: 'Pactto website' },
-    { routerLink: '/library ', icon: 'ondemand_video', text: 'Reference video library' },
+    { routerLink: '/library', icon: 'ondemand_video', text: 'Reference video library' },
     { routerLink: '/subscription', icon: 'subscriptions', text: 'Subscription' },
     { routerLink: '/review-settings', icon: 'link', text: 'Review Settings' },
   ];
