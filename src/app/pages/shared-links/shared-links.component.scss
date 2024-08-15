@@ -1,0 +1,17 @@
+.container {
+    margin: 0;
+    padding: 2.3rem 2rem;
+    color: #fff;
+    gap: 3rem;
+    width: 100%;
+
+
+    h1 {
+        font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+        padding-bottom: 2rem;
+    }
+
+    section:nth-child(2){
+        margin-top: 6rem;
+    }
+}
