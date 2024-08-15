@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    span{
+        font-size: 1.4rem;
+        color: #fff;
+    }
+}
