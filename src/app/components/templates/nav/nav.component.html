@@ -1,20 +1,18 @@
-<mat-drawer-container class="drawer-container" autosize hasBackdrop="true" color="primary">
+<mat-drawer-container class="drawer-container" autosize hasBackdrop="false" color="primary">
     <mat-drawer #drawer class="drawer" mode="side" [(opened)]="openDrawer" back color="secondary">
         <app-nav-header (onCloseDrawer)="closeDrawer()"/>
         <mat-nav-list>
-            <app-list-item routerLink="/" icon="house" text="Home" />
-            <app-list-item routerLink="/" icon="forum" text="Pacttos (Chats)" />
-            <app-list-item routerLink="/" icon="video_library" text="Items to review" />
-            <app-list-item routerLink="/" icon="link" text="Web links you created" />
-            <app-list-item routerLink="/" icon="manage_accounts" text="Web links you created" />
-            <app-list-item routerLink="/" icon="redeem" text="Personal information" />
-            <app-list-item routerLink="/" icon="view_carousel" text="Review packages for sale" />
-            <app-list-item routerLink="/" icon="ondemand_video" text="Pactto website" />
-            <app-list-item routerLink="/" icon="subscriptions" text="Reference video library" />
-            <app-list-item routerLink="/" icon="settings" text="Subscription" />
-            <app-list-item routerLink="/" icon="link" text="Review Settings" />
-            <app-button text="LOGOUT" [colorCss]="buttonColor"/>
+            @for (item of items; track $index; let index = $index) {
+                <app-list-item 
+                    [routerLink]="item.routerLink" 
+                    [icon]="item.icon" 
+                    [text]="item.text" 
+                    (itemClicked)="setActiveItem(index)"
+                    [isActive]="selectedIndex===index"
+                    />
+            }
         </mat-nav-list>
+        <app-button text="LOGOUT" [colorCss]="buttonColor"/>
     </mat-drawer>
 
     <div class="drawer-content">

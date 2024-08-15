@@ -1,3 +1,5 @@
+@use '../../../../../styles/colors/main-colors.scss' as main-colors;
+
 .container {
     display: flex;
     flex-direction: column;
@@ -35,6 +37,7 @@
     h2 {
         font-size: 1rem;
         margin-bottom: 2.5rem;
+        color: #545454;
     }
 
     section {
@@ -58,6 +61,7 @@
         .pro {
             display: flex;
             flex-direction: column;
+            color: main-colors.$secondary-dark;
 
             :nth-child(1) {
                 font-size: 0.6rem;
@@ -92,6 +96,10 @@
             font-size: 1.4rem;
             font-weight: normal;
             margin: 0;
+            color: #fff;
+        }
+        span{
+            color:#acacac
         }
     }
 
