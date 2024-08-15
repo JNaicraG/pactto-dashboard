@@ -1,1 +1,9 @@
-<p>pacttos works!</p>
+<app-container class="container">
+    <h1>Pacttos (Chats)</h1>
+    @if(comments.length === 0){
+        <div>
+            <span>No pacttos found</span>
+        </div>
+    }
+    <app-search-bar [queryControl]="queryControl"></app-search-bar>
+</app-container>
