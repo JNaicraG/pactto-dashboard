@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, output } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { timeout } from 'rxjs';
 
 @Component({
@@ -9,6 +9,7 @@ import { timeout } from 'rxjs';
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink,
     MatListModule
   ], //icon poderia ser com mat-icon, também
   templateUrl: './list-item.component.html',
