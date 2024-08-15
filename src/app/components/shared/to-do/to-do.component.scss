@@ -1,0 +1,22 @@
+@use '../../../../styles/colors/main-colors.scss' as main-colors;
+
+.container {
+    display: flex;
+    justify-content: start;
+    padding: 0.1rem;
+
+    .chip {
+        border-radius: 8px;
+        padding: 3px 6px;
+        background-color: #626262;
+        color: #fff;
+        font: 500 10px/14px 'Roboto';
+        text-align: center;
+        width: 32px;
+    }
+
+    .done{
+        background-color: #{main-colors.$accent-blue};
+    }
+
+}
