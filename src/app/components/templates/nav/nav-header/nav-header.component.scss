@@ -14,7 +14,7 @@
             margin-bottom: 1rem;
     
             img {
-                height: 45px;
+                height: 48px;
                 margin: 0;
             }
 
@@ -23,8 +23,8 @@
                 width: 50px;
                 i{
                     vertical-align: middle;
-                    font-weight: bolder;
-                    font-size: 1.8rem;
+                    font-weight: medium;
+                    font-size: 1.7rem;
                     color: #fff;
                 }
                 //border-radius: ;
@@ -99,6 +99,7 @@
             color: #fff;
         }
         span{
+            font-size: 0.9rem;
             color:#acacac
         }
     }
