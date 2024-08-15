@@ -1,7 +1,7 @@
 @use '../../../../styles/colors/main-colors.scss' as main-colors;
 
 div{
-    padding: 16px 32px;
+    margin:0;
     
     button{
         width: 100%;
@@ -9,10 +9,9 @@ div{
         background: main-colors.$accent-blue;
         font-weight: bolder;
         font-size: 1rem;
-        //box-sizing: content-box;
+        box-sizing: border-box !important;
 
         .prefix, .suffix{
-            //font-weight: lighter;
             font-size: 1.3rem;
         }
         
