@@ -1,3 +1,15 @@
 <div class="button">
-    <button mat-flat-button (color)="color" [ngStyle]="{'background-color': colorCss}">{{text}}</button>
+    <button mat-flat-button (color)="color" [ngStyle]="prefixIcon||suffixIcon ? {'box-sizing':'content-box', 'background-color': colorCss} : {'background-color': colorCss}">
+        @if(prefixIcon){
+            <i class="material-icons prefix">
+                {{prefixIcon}}
+            </i>
+        }
+        {{text}}
+        @if(suffixIcon){
+            <i class="material-icons suffix">
+                {{suffixIcon}}
+            </i>
+        }
+    </button>
 </div>
