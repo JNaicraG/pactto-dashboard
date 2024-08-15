@@ -4,28 +4,68 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
+@use './styles/themes/m3-theme.scss' as m3-theme;
+@use './styles/themes/m3-theme-2.scss' as m3-theme2;
+@use './styles/themes/m3-theme-3.scss' as m3-theme3;
+
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'Museo Slab';
+  src: url('./styles/fonts/museo-slab/Museo_Slab_100.otf') format('otf');
+  src: url('./styles/fonts/museo-slab/Museo_Slab_300.otf') format('otf');
+  src: url('./styles/fonts/museo-slab/Museo_Slab_500.otf') format('otf');
+  src: url('./styles/fonts/museo-slab/Museo_Slab_700.otf') format('otf');
+  src: url('./styles/fonts/museo-slab/Museo_Slab_900.otf') format('otf');
+  src: url('./styles/fonts/museo-slab/Museo_Slab_1000.otf') format('otf');
+}
+
+
+
+
 // Define the theme object.
 $pactto-dashboard-theme: mat.define-theme((
   color: (
-    theme-type: light,
-    primary: mat.$azure-palette,
+    theme-type: dark,
     tertiary: mat.$blue-palette,
+    primary: mat.$yellow-palette,
+  ),
+  typography:(
+    brand-family: (
+      font-family: "Museo Slab",
+      font-optical-sizing: auto,
+      font-weight: 900,
+      font-style: normal,
+      ),
+      plain-family: (
+        font-family: "Montserrat",
+        font-optical-sizing: auto,
+        font-weight: medium,
+        font-style: normal,
+      
+    ),   
   ),
   density: (
     scale: 0,
   )
 ));
 
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 :root {
-  @include mat.all-component-themes($pactto-dashboard-theme);
+  //@include mat.all-component-themes($pactto-dashboard-theme);
+  //@include mat.all-component-themes(m3-theme.$dark-theme);
+  @include mat.all-component-themes(m3-theme3.$dark-theme);
+  //@include mat.core-theme(m3-theme.$dark-theme);
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
