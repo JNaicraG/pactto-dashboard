@@ -1,0 +1,4 @@
+<app-container>
+    <input type="file" (change)="onFileSelected($event)" hidden #fileInput accept="video/*">
+    <app-button [colorCss]="buttonColor" text="UPLOAD NEW VIDEO" prefixIcon="add" (click)="fileInput.click()"></app-button>
+</app-container>
