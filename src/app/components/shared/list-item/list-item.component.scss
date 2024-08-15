@@ -1,14 +1,25 @@
-a{   
+@use '../../../../styles/colors/main-colors.scss' as main-colors;
+
+a {
     width: 100%;
     align-content: center;
     padding: 0 2rem;
+    --mdc-list-list-item-label-text-color: #b8b8b8; //cor do texto
     border-radius: 0px !important; //Nesse componente é melhor o !important do que alterar de maneira globar os estilos e procurar cada classe da drawer para tal
-                                    //Também foi preferíve, para o momento, do que utilizar ::ng-deep ou ViewEncapsulation.None
-                                    //Gostaria de utilizar app-child, porém não consegui a implementação correta por enquanto.
-    i{
+    
+    --mat-list-active-indicator-color: #3a363f; //Para quando está marcado como ACTIVE
+    //Também foi preferível, para o momento, do que utilizar ::ng-deep ou ViewEncapsulation.None
+    //Gostaria de utilizar app-child, porém não consegui a implementação correta por enquanto.
+    i {
         vertical-align: middle;
         margin-right: 12px;
     }
-    
-    
+
+    &:hover {
+        --mdc-list-list-item-hover-label-text-color: main-colors.$secondary-dark; //texto no hover
+    }   
+}
+
+.active{
+    --mdc-list-list-item-label-text-color: #{main-colors.$accent-blue}; //cor do texto
 }

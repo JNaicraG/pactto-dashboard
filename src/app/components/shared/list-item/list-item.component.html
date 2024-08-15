@@ -1,4 +1,4 @@
-<a mat-list-item (routerLink)="routerLink" >
+<a mat-list-item (routerLink)="routerLink" (click)="onClick()" [activated]=" isActive " [class.active]="isActive">
     <i class="material-icons">
         {{icon}}
     </i>
