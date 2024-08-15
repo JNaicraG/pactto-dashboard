@@ -1,1 +1,8 @@
-<p>video-library works!</p>
+<app-container class="container">
+    <div>
+        <h1>Select a video</h1>
+        <app-file-upload class="file-upload"></app-file-upload>
+    </div>
+    <h3>Videos uploaded to the reference video library can be used in side-by-side comparisons, or can be shared with learners directly.</h3>
+    <app-search-bar [queryControl]="queryControl"></app-search-bar>
+</app-container>

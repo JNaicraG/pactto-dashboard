@@ -1,0 +1,28 @@
+.container {
+    margin: 0;
+    padding: 1.1rem 2rem;
+    //min-width: 100%;
+
+    div {
+        //min-width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            color: #fff;
+            font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+        }
+
+        .file-upload {
+            width: fit-content;
+            flex-wrap: wrap;
+        }
+    }
+
+    h3{
+        font: 14px/21px 'Roboto';
+        color:#6e6e6e;
+    }
+}

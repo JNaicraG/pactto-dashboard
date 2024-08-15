@@ -10,8 +10,8 @@ export const routes: Routes = [
     { path:'home' , component: HomeComponent },
     { path:'pacttos' , component: PacttosComponent },
     { path:'videos-to-review' , component: ReviewVideosComponent },
-    { path:'shared-links' , component: SharedLinksComponent },
     { path:'library' , component: VideoLibraryComponent },
+    { path:'shared-links' , component: SharedLinksComponent },
     { path:'', component: HomeComponent, pathMatch:'full' },
     { path:'**', component: NotFoundComponent },
 ];
