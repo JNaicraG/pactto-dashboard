@@ -1,1 +1,7 @@
-<p>touch-button works!</p>
+@if(!drawerOpen){
+    <app-container>
+        <button mat-icon-button aria-label="Toggle Drawer" (click)="onClick()">
+            <i class="material-icons">menu</i>
+        </button>
+    </app-container>
+}
