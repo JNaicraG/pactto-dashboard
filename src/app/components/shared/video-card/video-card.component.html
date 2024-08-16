@@ -1,1 +1,14 @@
-<p>video-card works!</p>
+<mat-card class="card">
+    <img mat-card-image>
+    <mat-card-header>
+        <h1>{{name}}</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <span>Date: {{date}} {{hour}}</span>
+        <div class="tags-container">
+            @for(tag of tags; track $index){
+                <app-tag class="tag" [tag]="tag"></app-tag>
+            }
+        </div>
+    </mat-card-content>
+</mat-card>
