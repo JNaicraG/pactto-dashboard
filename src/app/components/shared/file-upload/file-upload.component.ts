@@ -1,5 +1,5 @@
 import { CssColorsEnum } from './../../../core/types/enums/css-colors.enum';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { ContainerComponent } from '../container/container.component';
 
@@ -19,8 +19,8 @@ export class FileUploadComponent {
   videoSrc: string | null = null;
   thumbnailSrc: string | null = null;
 
-  //@ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
-  //@ViewChild('video', { static: false }) video!: ElementRef<HTMLVideoElement>;
+  @ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('video', { static: false }) video!: ElementRef<HTMLVideoElement>;
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -30,33 +30,36 @@ export class FileUploadComponent {
       if (file.type.startsWith('video/')) {
         this.selectedFile = file;
         this.videoSrc = URL.createObjectURL(file);
-        //this.video.nativeElement.onloadeddata = () => {
-        //  this.captureThumbnail();
-      };
-    } else {
-      alert('Please select a valid video file.');
-      this.selectedFile = null;
-      this.videoSrc = null;
-      this.thumbnailSrc = null;
+        this.video.nativeElement.onloadeddata = () => {
+          this.captureThumbnail();
+        };
+        
+      } else {
+        alert('Please select a valid video file.');
+        this.selectedFile = null;
+        this.videoSrc = null;
+        this.thumbnailSrc = null;
+      }
     }
   }
 
   captureThumbnail(): void {
-    //const videoElement = this.video.nativeElement;
-    //const canvasElement = this.canvas.nativeElement;
+    const videoElement = this.video.nativeElement;
+    const canvasElement = this.canvas.nativeElement;
 
-    //// Configure o canvas para o tamanho do vídeo
-    //canvasElement.width = videoElement.videoWidth;
-    //canvasElement.height = videoElement.videoHeight;
+    // Configure o canvas para o tamanho do vídeo
+    canvasElement.width = videoElement.videoWidth;
+    canvasElement.height = videoElement.videoHeight;
 
-    //// Desenhe o frame do vídeo no canvas
-    //const context = canvasElement.getContext('2d');
-    //if (context) {
-    //  context.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+    // Desenhe o frame do vídeo no canvas
+    const context = canvasElement.getContext('2d');
+    if (context) {
+      context.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
 
-    //  // Gere a URL da thumbnail
-    //  this.thumbnailSrc = canvasElement.toDataURL('image/jpeg');
+      // Gere a URL da thumbnail
+      this.thumbnailSrc = canvasElement.toDataURL('image/jpeg');
     }
 
+  }
 }
 
