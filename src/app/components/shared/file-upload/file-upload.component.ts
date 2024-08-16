@@ -1,5 +1,5 @@
 import { CssColorsEnum } from './../../../core/types/enums/css-colors.enum';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { ContainerComponent } from '../container/container.component';
 
@@ -14,6 +14,22 @@ import { ContainerComponent } from '../container/container.component';
   styleUrl: './file-upload.component.scss'
 })
 export class FileUploadComponent {
+  buttonText:string = 'UPLOAD NEW VIDEO';
+
+  constructor() {
+    this.setResponsiveText();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.setResponsiveText();
+  }
+
+  private setResponsiveText() {
+    const width = window.innerWidth;
+    this.buttonText = width <= 767 ? 'UPLOAD' : 'UPLOAD NEW VIDEO';
+  }
+
   buttonColor: string = CssColorsEnum.ACCENT_BLUE;
   selectedFile: File | null = null;
   videoSrc: string | null = null;
