@@ -1,4 +1,9 @@
 <app-container class="container">
+@if(loading){
+    <div class="loading">
+        <mat-spinner></mat-spinner>
+    </div>
+}@else{
     <section>
         <ul>
             <h2> Hey {{'Username'}}, welcome to Pactto!</h2>
@@ -9,24 +14,28 @@
             <li>
                 <app-to-do [done]="false"></app-to-do>
                 <div>
-                    <span>Check the </span> 
-                    <a target="_blank" href="https://www.youtube.com/watch?si=j8Hi4uCL0oKfX7oU&t=93&v=CvbvDGsZsKM&feature=youtu.be"> short video of Pactto in action</a>
+                    <span>Check the </span>
+                    <a target="_blank"
+                        href="https://www.youtube.com/watch?si=j8Hi4uCL0oKfX7oU&t=93&v=CvbvDGsZsKM&feature=youtu.be">
+                        short video of Pactto in action</a>
                 </div>
             </li>
             <li>
                 <app-to-do [done]="false"></app-to-do>
                 <div>
-                    <span>Wanna record your computer screen or review files? Download Pactto for 
-                        <a href="https://pactto.com/#download" target="_blank">Mac</a> or 
-                        <a href="https://pactto.com/#download" target="_blank">Windows</a> </span> 
+                    <span>Wanna record your computer screen or review files? Download Pactto for
+                        <a href="https://pactto.com/#download" target="_blank">Mac</a> or
+                        <a href="https://pactto.com/#download" target="_blank">Windows</a> </span>
                 </div>
             </li>
             <li>
                 <app-to-do [done]="false"></app-to-do>
                 <div>
-                    <span>Wanna review videos, images or audio files with your phone or tablet? Download Pactto for 
-                        <a target="_blank" href="https://apps.apple.com/us/app/pactto-record-video-feedback/id1662226619">iOS</a> or 
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pactto.replay">Android</a></span>
+                    <span>Wanna review videos, images or audio files with your phone or tablet? Download Pactto for
+                        <a target="_blank"
+                            href="https://apps.apple.com/us/app/pactto-record-video-feedback/id1662226619">iOS</a> or
+                        <a target="_blank"
+                            href="https://play.google.com/store/apps/details?id=com.pactto.replay">Android</a></span>
                 </div>
             </li>
         </ul>
@@ -34,11 +43,17 @@
     <section>
         <div>
             <div>
-                <app-touch-button/>
+                <app-touch-button />
                 <h1>My uploads</h1>
             </div>
             <app-file-upload class="file-upload"></app-file-upload>
         </div>
         <app-search-bar [queryControl]="queryControl"></app-search-bar>
     </section>
+    <section class="videos-container">
+        @for(video of filteredVideos; track $index){
+        <app-video-card [name]="video.name" [tags]="video.tags" [date]="video.date" [hour]="video.hour" />
+        }
+    </section>
+}
 </app-container>
