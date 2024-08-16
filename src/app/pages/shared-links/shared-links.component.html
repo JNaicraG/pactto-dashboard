@@ -1,10 +1,16 @@
 <app-container class="container">
     <section>
-        <h1>{{publicLinks.length === 0 ? 'There are no public web links you created' : 'Public links you created'}}</h1>
+        <div>
+            <app-touch-button/>
+            <h1>{{publicLinks.length === 0 ? 'There are no public web links you created' : 'Public links you created'}}</h1>
+        </div>
         <app-search-bar [queryControl]="publicQueryControl"></app-search-bar>
     </section>
     <section>
-        <h1>{{publicLinks.length === 0 ? 'There are no private web links you created' : 'Private links you created'}}</h1>
+        <div>
+            <app-touch-button/>
+            <h1>{{publicLinks.length === 0 ? 'There are no private web links you created' : 'Private links you created'}}</h1>
+        </div>
         <app-search-bar [queryControl]="privateQueryControl"></app-search-bar>
     </section>
 </app-container>

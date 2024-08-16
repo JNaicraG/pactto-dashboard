@@ -1,7 +1,10 @@
 <app-container class="container">
-    <h1>Pacttos (Chats)</h1>
+    <div class="title">
+        <app-touch-button/>
+        <h1>Pacttos (Chats)</h1>
+    </div>
     @if(comments.length === 0){
-        <div>
+        <div class="not-found">
             <span>No pacttos found</span>
         </div>
     }

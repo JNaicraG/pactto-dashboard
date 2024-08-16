@@ -4,6 +4,10 @@
     color: #fff;
     gap: 1rem;
 
+    div{
+        display: flex;
+        align-items: center;
+    }
 
     h1 {
         font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';

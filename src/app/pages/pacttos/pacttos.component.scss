@@ -4,12 +4,16 @@
     color: #fff;
     gap: 1rem;
 
+    .title{
+        display: flex;
+        align-items: center;
 
-    h1 {
-        font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+        h1 {
+            font: bold 2rem 'Roboto', 'Helvetica Neue', 'sans-serif';
+        }
     }
 
-    div{
+    .not-found{
         padding-top: 1rem;
         display: flex;
         justify-content: center;

@@ -1,4 +1,7 @@
 <app-container class="container">
-    <h1>{{videos.length === 0 ? 'There are no review requests sent to you' : 'Review Videos'}}</h1>
+    <div>
+        <app-touch-button/>
+        <h1>{{videos.length === 0 ? 'There are no review requests sent to you' : 'Review Videos'}}</h1>
+    </div>
     <app-search-bar [queryControl]="queryControl"></app-search-bar>
 </app-container>
