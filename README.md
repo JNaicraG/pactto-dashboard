@@ -8,4 +8,4 @@ Esse projeto foi realizado para um teste de vaga de front-end promovido pela Pac
 
 ### Iniciar
 
-Para iniciar este projeto, apois realizar pull (ou baixa-lo), basta instalar as dependências com o comando 'npm install' e inicializar o angular com 'ng serve'. Lembrando que os comandos devem ser rodados em terminais a niveis da pasta do projeto. Também tenho o mesmo rodando pelo vercel: https://pactto-dashboard.vercel.app/ .
+Para iniciar este projeto, apois realizar pull (ou baixa-lo), basta instalar as dependências com o comando 'npm install' e inicializar o angular com 'ng serve'. Lembrando que os comandos devem ser rodados em terminal a niveis da pasta do projeto. Também tenho o mesmo rodando pelo vercel: https://pactto-dashboard.vercel.app/ .
