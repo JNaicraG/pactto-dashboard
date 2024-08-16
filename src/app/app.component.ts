@@ -5,7 +5,6 @@ import { NavComponent } from './components/templates/nav/nav.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    //RouterOutlet,
     NavComponent
   ],
   templateUrl: './app.component.html',
