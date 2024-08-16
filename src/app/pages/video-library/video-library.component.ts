@@ -4,6 +4,7 @@ import { Observable, startWith, map } from 'rxjs';
 import { ContainerComponent } from '../../components/shared/container/container.component';
 import { SearchBarComponent } from '../../components/shared/search-bar/search-bar.component';
 import { FileUploadComponent } from '../../components/shared/file-upload/file-upload.component';
+import { TouchButtonComponent } from '../../components/shared/touch-button/touch-button.component';
 
 @Component({
   selector: 'app-video-library',
@@ -11,7 +12,8 @@ import { FileUploadComponent } from '../../components/shared/file-upload/file-up
   imports: [
     ContainerComponent,
     SearchBarComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    TouchButtonComponent
   ],
   templateUrl: './video-library.component.html',
   styleUrl: './video-library.component.scss'
