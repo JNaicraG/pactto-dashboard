@@ -1,6 +1,7 @@
+import { NavService } from './../../../core/services/nav.service';
 import { CssColorsEnum } from './../../../core/types/enums/css-colors.enum';
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -24,7 +25,12 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
+
+  constructor(
+    private navService:NavService,
+  ){}
+
   items = [
     { routerLink: '/home', icon: 'house', text: 'Home' },
     { routerLink: '/pacttos', icon: 'forum', text: 'Pacttos (Chats)' },
@@ -43,6 +49,12 @@ export class NavComponent {
   selectedIndex:number | null = null;
 
 
+  ngOnInit(): void {
+    this.navService.getDrawerStatus().subscribe((value)=>{
+      this.openDrawer = value;
+    })
+  }
+
   setActiveItem(index: number) {
     console.log('EXISTIMOS FAMILÍA?')
     this.selectedIndex = index;
@@ -50,7 +62,7 @@ export class NavComponent {
   }
   
   closeDrawer(){
-    this.openDrawer = false;
+    this.navService.toggleDrawer(false);
   }
 
 }
