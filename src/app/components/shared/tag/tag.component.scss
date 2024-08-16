@@ -1,0 +1,17 @@
+@use '../../../../styles/colors/main-colors.scss' as main-colors;
+
+.container {
+    display: flex;
+    justify-content: start;
+    padding: 0.2rem;
+
+    .chip {
+        border-radius: 8px;
+        padding: 3px 6px;
+        background-color: #2f2f2f;
+        color: #{main-colors.$secondary-dark};
+        font: 500 0.8rem 'Roboto';
+        text-align: center;
+        width: 100%;
+    }
+}
