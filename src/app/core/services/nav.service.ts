@@ -7,10 +7,14 @@ import { BehaviorSubject } from 'rxjs';
 export class NavService {
 
   constructor() { }
-  private openDrawerSubject = new BehaviorSubject<boolean>(false);
+  private openDrawerSubject = new BehaviorSubject<boolean>(true);
 
   toggleDrawer(value:boolean){
     this.openDrawerSubject.next(value);
+  }
+
+  getDrawerStatus(){
+    return this.openDrawerSubject.asObservable();
   }
 
 }
