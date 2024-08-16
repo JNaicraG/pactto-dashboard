@@ -3,7 +3,7 @@
         <ul>
             <h2> Hey {{'Username'}}, welcome to Pactto!</h2>
             <li>
-                <app-to-do [done]="false"></app-to-do>
+                <app-to-do [done]="true"></app-to-do>
                 <span>Open your inbox and verify your email</span>
             </li>
             <li>
@@ -14,7 +14,7 @@
                 </div>
             </li>
             <li>
-                <app-to-do [done]="true"></app-to-do>
+                <app-to-do [done]="false"></app-to-do>
                 <div>
                     <span>Wanna record your computer screen or review files? Download Pactto for 
                         <a href="https://pactto.com/#download" target="_blank">Mac</a> or 
@@ -33,7 +33,10 @@
     </section>
     <section>
         <div>
-            <h1>My uploads</h1>
+            <div>
+                <app-touch-button/>
+                <h1>My uploads</h1>
+            </div>
             <app-file-upload class="file-upload"></app-file-upload>
         </div>
         <app-search-bar [queryControl]="queryControl"></app-search-bar>

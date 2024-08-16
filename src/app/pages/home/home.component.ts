@@ -5,6 +5,8 @@ import { Observable, startWith, map } from 'rxjs';
 import { ToDoComponent } from '../../components/shared/to-do/to-do.component';
 import { ContainerComponent } from '../../components/shared/container/container.component';
 import { FileUploadComponent } from '../../components/shared/file-upload/file-upload.component';
+import { Video } from '../../core/types/video';
+import { TouchButtonComponent } from '../../components/shared/touch-button/touch-button.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,8 @@ import { FileUploadComponent } from '../../components/shared/file-upload/file-up
     SearchBarComponent,
     ToDoComponent,
     ContainerComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    TouchButtonComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -23,11 +26,14 @@ export class HomeComponent implements OnInit{
   queryControl:FormControl = new FormControl('');
   query: any = '';
 
+  videos:Video[] = [];
+  filteredVideos:Video[] = [];
+
   ngOnInit(): void {
     this._updateFilter()
       .subscribe(cardsAtualizados => {
         //this.query = queryAtual;
-        //this.cardsFiltrados = cardsAtualizados;
+        this.filteredVideos = cardsAtualizados;
       });
   }
 
@@ -41,13 +47,12 @@ export class HomeComponent implements OnInit{
 
 
   private _filter(query: string): any[] {
-    //if (query === '') {
-    //  return this.cards;
-    //}
-    //const filteredValue = query.toLowerCase();
-    //const cardsFiltrados = this.cards.filter(card => card.titulo.toLowerCase().includes(filteredValue));
-    //return cardsFiltrados;
-    return [''];
+    if (query === '') {
+      return this.videos;
+    }
+    const filteredValue = query.toLowerCase();
+    const filteredVideos = this.videos.filter(video => video.name.toLowerCase().includes(filteredValue));
+    return filteredVideos;
   }
 
 }
