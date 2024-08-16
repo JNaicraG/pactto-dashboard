@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => this.loading = false,
-      1500
+      700
     );
 
     this._updateFilter()
